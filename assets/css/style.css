@@ -1,0 +1,284 @@
+body {
+    font-family: "Raleway", sans-serif;
+}
+a {
+    text-decoration: none;
+}
+/* components */
+.special-heading {
+    text-align: center;
+}
+.special-heading h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+}
+.special-heading h3::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 60px;
+    background-color: blue;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* end components */
+/* scrollbar color*/
+::-webkit-scrollbar {
+    width: .4rem;
+    background-color:transparent ;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #0078ff;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #3700ffc0;
+}
+
+
+/* end scroll bar  */
+/* start of nav  */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.nav-link{
+    position: relative;
+}
+.nav-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: 0.5s ease;
+}
+.nav-link:hover {
+    transition-delay: 0.5s;
+}
+
+/* .nav-link:hover::before {
+    width: 100%;
+} */
+ .nav-link:focus::before,
+ .link-checked::before,
+ .nav-link:hover::before{
+    width: 100%;
+}
+/* end of nav  */
+/* Start landing */
+.landing {
+    background-image: url(../../assets/images/intro-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+/* end landing */
+/* about */
+.about-right h3 {
+    position: relative;
+}
+.about-right h3::after,
+.about-left h3::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 80px;
+    background-color: blue;
+    bottom: -5px;
+    left: 0;
+}
+
+/* end about */
+/* resume */
+
+.resume h4 {
+    position: relative;
+    margin-top: 0;
+}
+.resume h4::before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border: 2px solid #0078ff;
+    border-radius: 50%;
+    background-color: white;
+    top: 0px;
+    left: -25px;
+    }
+/* end resume */
+/* start of services  */
+
+.services .service-item {
+    border-radius: 20px !important;
+    height: 280px;
+    transition: all .3s;
+}
+
+.services .service-item:hover{
+    box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1),0px 5px 0px 0px #0078ff !important;
+    transform: translateY(-5px);
+}
+.services .service-item .icon i {
+    background-color: #0078ff;
+    color: white;
+    border: 4px solid white;
+    font-size: 25px;
+    display: flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s linear;
+}
+.services .service-item:hover.service-item .icon i {
+    color: #0078ff;
+    background-color: white;
+    border: 4px solid #0078ff;
+}
+/* End of services  */
+/* start of statistics  */
+.statistics {
+    background-image: url(../../assets/images/counters-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    }
+
+.statistics::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0077ff8e;
+}
+.statistics .stats-item span {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+}
+.statistics .stats-item p {
+    font-size: 20px;
+    font-weight: light;
+}
+/* End of statistics  */
+/* start of portfilio  */
+
+
+/* From Uiverse.io by WhiteNervosa */ 
+.portfolio button {
+font-size: 18px;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+.portfolio button:focus,
+.buttons .btn-clicked,
+.portfolio button:hover {
+    color: #0078ff;
+}
+
+.portfolio button:focus:after,
+.buttons .btn-clicked:after,
+.portfolio button:hover:after {
+  width: 100%;
+  left: 0%;
+}
+.portfolio button:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #0078ff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+/* end of portfilio  */
+/* start of pricing */
+.pricing .pricing-item {
+    border-bottom: 1px dashed #777;
+}
+/* end of pricing */
+/* start of testimonials */
+.testimonials {
+    background-image: url(../images/testimonialbg.webp);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+.testimonials .carousel-indicators{
+    position: absolute;
+    bottom:-50px;
+
+}
+.testimonials::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0077ff8e;
+}
+/* end of testimonials */
+/* start of contact */
+.contact .contact-item i {
+    width: 50px;
+    height: 50px;
+    font-size: px;
+    border: 1px solid #0078ff;
+    border-radius: 50%;
+    color: #0078ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+}
+.contact .contact-item:hover.contact-item i {
+    background-color: #0078ff;
+    color: white;
+}
+/* end of contact */
+/* footer  */
+footer {
+    background-color: #0078ff;
+}
+footer .social-icons i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 7px;
+    width: 40px;
+    height: 40px;
+    color: rgba(255, 255, 255, 30%);
+    border: 1px solid rgba(255, 255, 255, 30%);
+    border-radius: 50%;
+    transition: .3s;
+}
+footer .social-icons i:hover {
+    color: white;
+    border-color: white;
+    cursor: pointer;
+} 
+footer .social-icons+div a {
+    color: rgba(255, 255, 255, 30%);
+    font-size: 14px;
+    margin-left: 5px;
+}
